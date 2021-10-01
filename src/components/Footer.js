@@ -8,9 +8,16 @@ export default function Footer() {
       <div className="container flex flex-col md:flex-row items-center">
         <div className="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
           <div className="py-1">
-            <Image src="/book.svg" height={50} width={50} />
+            <Image
+              src="/book.svg"
+              height={50}
+              width={50}
+              alt="books"
+              placeholder="blur"
+              blurDataURL="/book.svg"
+            />
           </div>
-          <ul className="flex text-white gap-12 text-md">
+          <ul className="flex text-white sm:gap-12 gap-5 flex-wrap justify-center text-md">
             <li className="cursor-pointer hover:underline">
               <Link href="#">Features</Link>
             </li>
@@ -54,6 +61,11 @@ export default function Footer() {
             </a>
           </Link>
         </div>
+      </div>
+      <div className="flex md:justify-start container items-center pt-10 justify-center">
+        <p className="text-sm text-bookmark-white">
+          &copy; Ninja Kucir. All Right Reserved
+        </p>
       </div>
     </footer>
   );

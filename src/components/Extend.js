@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Card from "./molecules/Card";
 import Heading from "./molecules/Heading";
 

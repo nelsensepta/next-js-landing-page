@@ -30,6 +30,8 @@ export default function Feature({
               width={400}
               qulity={100}
               className="z-10"
+              blurDataURL="/svg/amico.svg"
+              placeholder="blur"
             />
           )}
           {tlOn && <Blob.Circle1 tl={tlOn} />}

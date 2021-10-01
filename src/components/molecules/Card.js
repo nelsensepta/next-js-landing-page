@@ -9,6 +9,8 @@ export default function Card({ img, title, subTitle }) {
         width={1920}
         height={1280}
         quality={100}
+        placeholder="blur"
+        blurDataURL={`/img/${img}.jpg`}
         className="object-cover hover:scale-105 transform transition-all duration-400 cursor-pointer"
       />
       <div className="p-6 flex flex-col text-left space-y-3">
