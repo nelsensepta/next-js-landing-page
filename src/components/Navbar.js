@@ -50,6 +50,11 @@ export default function Navbar() {
           <li className="cursor-pointer btn btn-red">
             <Link href="#">Login</Link>
           </li>
+          <FontAwesomeIcon
+            icon={theme !== dark ? "sun" : "moon"}
+            size="2x"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
         </ul>
         <div className="flex sm:hidden flex-1 justify-end gap-10 pt-3">
           <FontAwesomeIcon
