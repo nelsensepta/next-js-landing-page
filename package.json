@@ -14,7 +14,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "autoprefixer": "^10.3.5",
-    "lottie-colorify": "^0.8.0",
     "lottie-web": "^5.7.13",
     "next": "11.1.2",
     "next-themes": "^0.0.15",

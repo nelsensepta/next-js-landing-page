@@ -25,7 +25,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-          <WebDesign lottie="website-animation" />
+          <WebDesign lottie="book-loading" />
         </div>
       </div>
       <div className="hidden md:block bg-bookmark-purple dark:bg-bookmark-white rounded-l-full absolute lg:h-72 md:h-1/2 md:top-28 w-1/2 lg:top-36 right-0 lg:-right-36"></div>

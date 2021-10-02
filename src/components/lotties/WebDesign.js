@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import Lottie from "lottie-web";
-import { colorify, getColors } from "lottie-colorify";
 
 export default function WebDesign({ lottie }) {
   const container = useRef(null);

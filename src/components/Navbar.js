@@ -20,14 +20,7 @@ export default function Navbar() {
     <header className=" top-0 inset-x-0 shadow-md dark:bg-transparent  backdrop-blur-lg fixed z-50">
       <nav className="container flex sm:items-center justify-between py-4 items-start">
         <div className="flex-1 justify-start self-start">
-          <Image
-            src="/book.svg"
-            height={50}
-            width={50}
-            alt="bars"
-            blurDataURL="/book.svg"
-            placeholder="blur"
-          />
+          <Image src="/book.svg" height={50} width={50} alt="bars" />
         </div>
         <ul
           className={`${
@@ -51,6 +44,7 @@ export default function Navbar() {
             <Link href="#">Login</Link>
           </li>
           <FontAwesomeIcon
+            className="hidden sm:block"
             icon={theme !== dark ? "sun" : "moon"}
             size="2x"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

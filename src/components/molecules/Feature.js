@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import * as Blob from "./Circle";
 import WebDesign from "../lotties/WebDesign";
-import { useTheme } from "next-themes";
 
 export default function Feature({
   reverse,
@@ -11,6 +10,7 @@ export default function Feature({
   brOn,
   tlOn,
   one,
+  url,
   lottieName,
   title,
   content,
@@ -36,12 +36,13 @@ export default function Feature({
             <WebDesign lottie={lottieName} />
           ) : (
             <Image
-              src="/svg/amico.svg"
+              src={url}
               height={300}
               width={400}
+              loading="lazy"
               qulity={100}
               className="z-10"
-              blurDataURL="/svg/amico.svg"
+              blurDataURL={url}
               placeholder="blur"
             />
           )}

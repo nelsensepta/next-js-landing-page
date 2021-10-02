@@ -10,22 +10,21 @@ export default function Features() {
         Curabitur fermentum porttitor cursus. Sed."
       />
       <Feature
-        lottieOn
         brOn
+        url="/svg/book.svg"
         tlOn
         one
-        lottieName="webdesign"
         title="Bookmark in one click"
         content="Proin gravida vestibulum tellus, at tristique tellus. Suspendisse lacus leo, faucibus a volutpat et, euismod eget mauris. Aenean fringilla ullamcorper libero, in vehicula purus ornare."
       />
       <Feature
+        url="/svg/amico.svg"
         reverse
         title="Get Your Bookmark"
         content="In non orci eget nibh rhoncus posuere a nec felis. Donec in ipsum leo. Nunc id sem at dolor tempor consequat. In rhoncus mattis lorem, in ultrices nunc ultricies vitae."
       />
       <Feature
-        lottieOn
-        lottieName="web-design-animation"
+        url="/img/reading.png"
         title="Search Your Bookmark"
         content="Maecenas felis nisi, malesuada ornare faucibus at, dictum ac velit. Aenean posuere risus quis tortor venenatis congue. Phasellus eu veli."
       />

@@ -8,6 +8,7 @@ export default function Card({ img, title, subTitle }) {
         src={`/img/${img}.jpg`}
         width={1920}
         height={1280}
+        loading="lazy"
         quality={100}
         placeholder="blur"
         blurDataURL={`/img/${img}.jpg`}
