@@ -18,7 +18,8 @@ module.exports = {
         "title-dark": "#E2E8F0",
         "title-dark-second": "#A3A3A3",
         "red-dark": "#7C2D12",
-        "blue-dark": "#1E3A8A",
+        "blue-dark-second": "#1E3A8A",
+        "blue-dark": "#00003F",
       },
     },
     fontFamily: {

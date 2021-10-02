@@ -9,13 +9,9 @@ export default function WebDesign({ lottie }) {
       container: container.current,
       loop: true,
       autoplay: true,
-      animationData: colorify(
-        ["#f45200", [50, 100, 200], "#fe0088"],
-        require(`../../../public/lotties/${lottie}.json`)
-      ),
+      animationData: require(`../../../public/lotties/${lottie}.json`),
       renderer: "svg",
     });
-    console.log(getColors(require(`../../../public/lotties/${lottie}.json`)));
   }, []);
   return (
     <div

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import * as Blob from "./Circle";
 import WebDesign from "../lotties/WebDesign";
+import { useTheme } from "next-themes";
 
 export default function Feature({
   reverse,
@@ -13,6 +15,15 @@ export default function Feature({
   title,
   content,
 }) {
+  // const { theme } = useTheme();
+  const [dark, setDark] = useState("");
+  useEffect(() => {
+    if (localStorage.theme === "dark") {
+      setDark("dark");
+    } else {
+      setDark("light");
+    }
+  }, []);
   return (
     <div className={`mt-20 ${one ? "lg:mt-24" : "lg:mt-52"}`}>
       <div
@@ -34,8 +45,8 @@ export default function Feature({
               placeholder="blur"
             />
           )}
-          {tlOn && <Blob.Circle1 tl={tlOn} />}
-          {brOn && <Blob.Circle2 br={brOn} />}
+          {tlOn && <Blob.Circle1 tl={tlOn} theme={dark} />}
+          {brOn && <Blob.Circle2 br={brOn} theme={dark} />}
         </div>
         <div className="flex flex-1 flex-col items-center lg:items-start">
           <h1 className="text-3xl text-bookmark-blue dark:text-title-dark">
