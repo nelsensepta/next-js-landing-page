@@ -3,6 +3,9 @@ module.exports = {
   compilerOptions: {
     baseUrl: "./src",
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   // webpack(config) {
   //   config.module.rules.push({
   //     test: /\.svg$/,

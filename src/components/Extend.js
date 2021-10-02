@@ -3,7 +3,7 @@ import Heading from "./molecules/Heading";
 
 export default function Extend() {
   return (
-    <section className="py-20 mt-20">
+    <section className="py-20">
       <Heading
         title="Download the extension"
         subTitle="Fusce sem nulla, aliquam eu auctor rutrum, laoreet suscipit magna. Proin ut lacus dictum felis sodales convallis. Donec id metus justo. Phasellus vitae neque ligula. Nunc facilisis auctor urna eget"

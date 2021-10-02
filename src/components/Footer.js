@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ScrollTop from "./molecules/ScrollTop";
 
 export default function Footer() {
   return (
-    <footer className="bg-bookmark-blue py-8">
+    <footer className="bg-bookmark-blue dark:bg-bookmark-dark py-8 relative">
       <div className="container flex flex-col md:flex-row items-center">
         <div className="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
           <div className="py-1">
@@ -56,7 +57,7 @@ export default function Footer() {
               <FontAwesomeIcon
                 icon={["fab", "twitter"]}
                 size="2x"
-                className="text-bookmark-white hover:text-bookmark-grey"
+                className="text-bookmark-white hover:text-bookmark-grey dark:hover:text-title-dark-second"
               />
             </a>
           </Link>
@@ -67,6 +68,7 @@ export default function Footer() {
           &copy; Ninja Kucir. All Right Reserved
         </p>
       </div>
+      <ScrollTop />
     </footer>
   );
 }

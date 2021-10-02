@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="bg-bookmark-purple text-white py-20 ">
+    <section className="bg-bookmark-purple dark:bg-bookmark-dark text-white dark:text-title-dark py-20 ">
       <div className="container ">
         <div className="sm:w-3/4 lg:w-1/2 mx-auto">
           <p className="font-light uppercase text-center mb-8">
@@ -13,7 +13,7 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Enter Your Text"
-              className="focus:outline-none focus:ring-2 ring-bookmark-grey flex-1 px-2 py-3 rounded-md text-black"
+              className="focus:outline-none focus:ring-2 ring-bookmark-grey flex-1 px-2 py-3 rounded-md dark:text-title-dark text-black"
             />
             <button
               type="button"

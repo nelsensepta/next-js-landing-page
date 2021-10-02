@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   const [canvas, setCanvas] = useState(false);
-  console.log(canvas);
+  const { theme, setTheme } = useTheme();
+  const [dark, setDark] = useState("");
+  useEffect(() => {
+    if (localStorage.theme === "dark") {
+      setDark("dark");
+    } else {
+      setDark("light");
+    }
+  }, []);
+
   return (
-    <header className=" top-0 inset-x-0 shadow-md backdrop-blur-lg fixed z-50">
+    <header className=" top-0 inset-x-0 shadow-md dark:bg-transparent  backdrop-blur-lg fixed z-50">
       <nav className="container flex sm:items-center justify-between py-4 items-start">
         <div className="flex-1 justify-start self-start">
           <Image
@@ -22,9 +32,9 @@ export default function Navbar() {
         <ul
           className={`${
             canvas ? "flex pt-20" : "hidden"
-          } sm:flex flex-1 justify-end items-center gap-12 flex-col sm:flex-row text-bookmark-blue text-md `}
+          } sm:flex flex-1 justify-end items-center gap-12 flex-col sm:flex-row text-bookmark-blue dark:text-title-dark text-md`}
         >
-          <hr className="w-full border-t-2 border-black text-blue-300 md:hidden" />
+          <hr className="w-full border-t-2 border-black text-blue-300 dark:border-white md:hidden" />
           <li className="cursor-pointer hover:underline">
             <Link href="#">Features</Link>
           </li>
@@ -37,12 +47,16 @@ export default function Navbar() {
           <li className="cursor-pointer hover:underline">
             <Link href="#">Contact</Link>
           </li>
-          <li className="cursor-pointer bg-bookmark-red text-white rounded-md px-7 py-3">
+          <li className="cursor-pointer btn btn-red">
             <Link href="#">Login</Link>
           </li>
         </ul>
         <div className="flex sm:hidden flex-1 justify-end gap-10 pt-3">
-          <FontAwesomeIcon icon="moon" size="2x" />
+          <FontAwesomeIcon
+            icon={theme !== dark ? "sun" : "moon"}
+            size="2x"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
           <FontAwesomeIcon
             icon="align-right"
             size="2x"

@@ -3,7 +3,7 @@ import Heading from "./molecules/Heading";
 
 export default function Features() {
   return (
-    <section className="bg-bookmark-white py-20 mt-20 lg:mt-60">
+    <section className="bg-bookmark-white dark:bg-bookmark-dark-second py-20 mt-20 lg:mt-60">
       <Heading
         title="Features"
         subTitle="Cras nec augue non nibh venenatis imperdiet dignissim commodo mauris.

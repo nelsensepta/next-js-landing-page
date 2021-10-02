@@ -11,12 +11,16 @@ export default function FaqItem({ question, answer }) {
         <span className="flex-1">{question}</span>
         <FontAwesomeIcon
           icon="chevron-up"
-          className={`text-bookmark-purple transition duration-400  ${
+          className={`text-bookmark-purple dark:text-blue-dark transition duration-400  ${
             down ? "transform rotate-180" : "rotate-0"
           }`}
         />
       </div>
-      {down && <p className="leading-relaxed text-sm pt-2">{answer}</p>}
+      {down && (
+        <p className="leading-relaxed text-sm pt-2 dark:text-title-dark-second">
+          {answer}
+        </p>
+      )}
     </div>
   );
 }

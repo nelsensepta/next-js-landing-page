@@ -4,7 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -13,6 +13,12 @@ module.exports = {
         "bookmark-blue": "#242A45",
         "bookmark-grey": "#9194A2",
         "bookmark-white": "#f7f7f7",
+        "bookmark-dark": "#111810",
+        "bookmark-dark-second": "#0F1703",
+        "title-dark": "#E2E8F0",
+        "title-dark-second": "#A3A3A3",
+        "red-dark": "#7C2D12",
+        "blue-dark": "#1E3A8A",
       },
     },
     fontFamily: {

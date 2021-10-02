@@ -14,8 +14,10 @@ export default function Card({ img, title, subTitle }) {
         className="object-cover hover:scale-105 transform transition-all duration-400 cursor-pointer"
       />
       <div className="p-6 flex flex-col text-left space-y-3">
-        <h1 className="text-bookmark-blue text-xl font-semibold">{title}</h1>
-        <p className="text-bookmark-grey font-light leading-relaxed">
+        <h1 className="text-bookmark-blue text-xl font-semibold dark:text-title-dark">
+          {title}
+        </h1>
+        <p className="text-bookmark-grey font-light leading-relaxed dark:text-title-dark-second">
           {subTitle}
         </p>
         <Link href="#">

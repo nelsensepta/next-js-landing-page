@@ -4,7 +4,7 @@ import Heading from "./molecules/Heading";
 
 export default function FAQ() {
   return (
-    <section className="bg-bookmark-white py-20 mt-20">
+    <section className="bg-bookmark-white py-20 mt-20 dark:bg-bookmark-dark-second">
       <Heading
         title="Frequenty Asked Questions"
         subTitle="Here are some of our FAQs. if you have any other questions you'd like answered please feel free"
