@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Travel One Page</title>
+        <title>Book One Page</title>
       </Head>
       <Hero />
       <Features />
