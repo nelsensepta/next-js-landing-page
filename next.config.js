@@ -6,12 +6,8 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // webpack(config) {
-  //   config.module.rules.push({
-  //     test: /\.svg$/,
-  //     use: ["@svgr/webpack"],
-  //   });
-
-  //   return config;
-  // },
+  generateBuildId: async () => {
+    // You can, for example, get the latest git commit hash here
+    return "my-build-id";
+  },
 };
