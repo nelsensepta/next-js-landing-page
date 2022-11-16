@@ -58,7 +58,13 @@ export default function Footer() {
       </div>
       <div className="flex md:justify-start container items-center pt-10 justify-center">
         <p className="text-sm text-bookmark-white">
-          &copy; Ninja Kucir. All Right Reserved
+          &copy;{" "}
+          <Link href="https://github.com/nelsensepta">
+            <a className="text-blue-400" target="_blank">
+              Nelsen Septa
+            </a>
+          </Link>
+          . All Right Reserved
         </p>
       </div>
       <ScrollTop />
