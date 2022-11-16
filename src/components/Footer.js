@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScrollTop from "./molecules/ScrollTop";
+import { BsYoutube, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -29,29 +29,17 @@ export default function Footer() {
         <div className="flex gap-12 mt-12 md:mt-0 ">
           <Link href="#">
             <a>
-              <FontAwesomeIcon
-                icon={["fab", "instagram"]}
-                size="2x"
-                className="text-bookmark-white hover:text-bookmark-grey"
-              />
+              <BsInstagram className="text-3xl text-bookmark-white hover:text-bookmark-grey" />
             </a>
           </Link>
           <Link href="#">
             <a>
-              <FontAwesomeIcon
-                icon={["fab", "youtube"]}
-                size="2x"
-                className="text-bookmark-white hover:text-bookmark-grey"
-              />
+              <BsYoutube className="text-3xl text-bookmark-white hover:text-bookmark-grey" />
             </a>
           </Link>
           <Link href="#">
             <a>
-              <FontAwesomeIcon
-                icon={["fab", "twitter"]}
-                size="2x"
-                className="text-bookmark-white hover:text-bookmark-grey dark:hover:text-title-dark-second"
-              />
+              <BsTwitter className="text-3xl text-bookmark-white hover:text-bookmark-grey" />
             </a>
           </Link>
         </div>

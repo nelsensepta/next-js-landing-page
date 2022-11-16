@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HiOutlineMenu, HiMoon, HiSun } from "react-icons/hi";
 
 export default function Navbar() {
   const [canvas, setCanvas] = useState(false);
@@ -43,22 +44,33 @@ export default function Navbar() {
           <li className="cursor-pointer btn btn-red">
             <Link href="#">Login</Link>
           </li>
-          <FontAwesomeIcon
-            className="hidden sm:block"
-            icon={theme !== dark ? "sun" : "moon"}
-            size="2x"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
+          {theme !== dark ? (
+            <HiSun
+              className="text-5xl hidden sm:block"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          ) : (
+            <HiMoon
+              className="text-5xl hidden sm:block"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          )}
         </ul>
-        <div className="flex sm:hidden flex-1 justify-end gap-10 pt-3">
-          <FontAwesomeIcon
-            icon={theme !== dark ? "sun" : "moon"}
-            size="2x"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
-          <FontAwesomeIcon
-            icon="align-right"
-            size="2x"
+        <div className="flex sm:hidden flex-1 justify-end gap-7">
+          {theme !== dark ? (
+            <HiSun
+              className="text-5xl"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          ) : (
+            <HiMoon
+              className="text-5xl"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            />
+          )}
+
+          <HiOutlineMenu
+            className="text-5xl"
             onClick={() => setCanvas(!canvas)}
           />
         </div>

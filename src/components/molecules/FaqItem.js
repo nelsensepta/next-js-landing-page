@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs";
 import { useState } from "react";
 export default function FaqItem({ question, answer }) {
   const [down, setDown] = useState(false);
@@ -9,9 +10,9 @@ export default function FaqItem({ question, answer }) {
         onClick={() => setDown(!down)}
       >
         <span className="flex-1">{question}</span>
-        <FontAwesomeIcon
-          icon="chevron-up"
-          className={`text-bookmark-purple dark:text-white transition duration-400  ${
+
+        <BsCaretUpFill
+          className={`text-bookmark-purple dark:text-white transition duration-500  ${
             down ? "transform rotate-180" : "rotate-0"
           }`}
         />
